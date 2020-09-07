@@ -1,0 +1,90 @@
+@import "templates/fonts"
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body, html
+  background-color: #343434
+  color: #EEEEEE
+
+#page-container
+  max-width: 90vw
+
+  position: relative
+  transform: translate(-50%, -0%)
+  left: 50%
+
+  background-color: #5D5D5D
+  min-height: 100vh
+  box-shadow: 0 0 15px rgba(0, 0, 0, .35)
+
+#title-container
+  position: relative
+  transform: translate(-50%, -0%)
+  height: 30vh
+  left: 50%
+  width: 100%
+
+  background-color: #1AD136
+
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .15)
+
+#page-title
+  position: relative
+  transform: translate(-50%, -50%)
+  left: 50%
+  top: 50%
+
+  text-align: center
+
+  font-family: 'Open Sans', serif
+  font-size: 32px
+  font-weight: 800
+  text-transform: uppercase
+
+/* Create three equal columns that floats next to each other */
+.column
+  float: left
+  width: 33.33%
+  padding: 15px
+
+  font-family: 'Open Sans', serif
+
+  .title
+    font-size: 24px
+    font-weight: 600
+
+    color: #1AD136
+
+  .subtitle
+    font-size: 16px
+    font-weight: 300
+
+    text-align: justify
+
+/* Clear floats after the columns */
+.row:after
+  content: ""
+  display: table
+  clear: both
+
+#description
+  margin-top: 7.5vh
+  max-width: 90%
+
+  position: relative
+  transform: translate(-50%, -0%)
+  left: 50%
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 900px)
+  #page-container
+    max-width: 100vw
+
+  .column
+    width: 100%
+
+  #title-container
+    height: 20vh
