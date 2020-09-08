@@ -1,0 +1,36 @@
+#navigator {
+  z-index: 99;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #282828;
+  font-family: "Open Sans", serif;
+  font-weight: 400;
+  transition-duration: 0.25s;
+}
+#navigator li {
+  float: left;
+}
+#navigator li a {
+  font-size: 18px;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 24px 32px;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+#navigator li a:hover {
+  background-color: #1e1e1e;
+  cursor: pointer;
+}
+
+#navigator.scrolled {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.375);
+}
+
+/*# sourceMappingURL=navigator.css.map */
