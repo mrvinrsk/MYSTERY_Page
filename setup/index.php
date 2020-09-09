@@ -1,3 +1,30 @@
+<?php
+session_start();
+
+include_once "../../API/SQL/mysql_account.php";
+include_once "../../API/SQL/mysql_api.php";
+include_once "../../API/page/data.php";
+
+$sql = new MySQLAPI($conn);
+
+if (isset($_SESSION['userid'])) {
+    header("Location: ../../");
+}
+
+function log($message)
+{
+    echo "<div class='step'>SETUP >  " . $message . "</div>";
+}
+
+
+
+
+$user = $sql->rows("CREATE TABLE IF NOT EXISTS Users(ID int, )"); // TODO: FINISH
+
+
+
+?>
+
 <!doctype html>
 <html lang="de">
 <head>
@@ -8,7 +35,6 @@
     <title>Mystery | Setup</title>
 </head>
 <body>
-
 
 
 </body>

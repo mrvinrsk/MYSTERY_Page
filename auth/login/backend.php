@@ -17,10 +17,13 @@ if (isset($_POST['login'])) {
 
         if (password_verify($password, $userAccount['Password'])) {
             // RICHTIGES PASSWORT
-        }else {
+            $_SESSION['userid'] = $userAccount['ID'];
+
+            header("Location: ../../quizzes/");
+        } else {
             // FALSCHES PASSWORT
         }
-    }else {
+    } else {
         // KEIN ACCOUNT GEFUNDEN
     }
 } else {

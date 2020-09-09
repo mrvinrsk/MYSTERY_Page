@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-//include_once "../../API/SQL/mysql_account.php";
+include_once "../../API/SQL/mysql_account.php";
 include_once "../../API/SQL/mysql_api.php";
 include_once "../../API/page/data.php";
 
-//$sql = new MySQLAPI($conn);
+$sql = new MySQLAPI($conn);
 
 if (isset($_SESSION['userid'])) {
     header("Location: ../../");
@@ -30,7 +30,7 @@ if (isset($_SESSION['userid'])) {
 include_once "../../templates/navigator/navigator.php";
 ?>
 
-<form>
+<form action="backend.php" method="post">
     <div id="title-container">
         <span id="title">Login</span></br>
         <span id="subtitle">Create an Account. This helps us to save your progress.</span></br>
