@@ -25,12 +25,28 @@ class MySQLAPI
         return $result;
     }
 
-    public function rows($query) {
+    public function rows($query)
+    {
         $statement = $this->connection->prepare($query);
         $statement->execute();
         $rows = $statement->rowCount();
 
         return $rows;
+    }
+
+    public function tableExists($table)
+    {
+        $statement = $this->connection->prepare('SELECT 1 FROM `' . $table . '` LIMIT 1;');
+        $statement->execute();
+        $result = $statement->fetch();
+
+        if ($result !== FALSE) {
+            //DO SOMETHING! IT EXISTS!
+            return true;
+        } else {
+            //I can't find it...
+            return false;
+        }
     }
 
 }
